@@ -14,8 +14,6 @@ services:
         local?replicaSet=${MONGODB_REPLICA_SET_NAME:-rs0}}"
       ROOT_URL: ${ROOT_URL:-http://localhost:${HOST_PORT:-3000}}
       PORT: ${PORT:-3000}
-      DEPLOY_METHOD: docker
-      DEPLOY_PLATFORM: ${DEPLOY_PLATFORM}
     depends_on:
       - mongodb
     expose:
@@ -39,5 +37,5 @@ services:
       ALLOW_EMPTY_PASSWORD: ${ALLOW_EMPTY_PASSWORD:-yes}
 
 volumes:
-  mongodb_data: { driver: local }
+  mongodb_data: 
 
