@@ -36,6 +36,9 @@ services:
       MONGODB_ENABLE_JOURNAL: 'true'
       ALLOW_EMPTY_PASSWORD: 'yes'
       MONGODB_BIND_IP: 0.0.0.0
+    ports:
+      - "27017:27017"
+    
 
 volumes:
   mongodb_data:
