@@ -35,9 +35,7 @@ services:
       MONGODB_ADVERTISED_HOSTNAME: mongodb
       MONGODB_ENABLE_JOURNAL: 'true'
       ALLOW_EMPTY_PASSWORD: 'yes'
-    command: ["mongod", "--bind_ip", "0.0.0.0", "--noauth"]
-    
-    
+      BIND_IP: 0.0.0.0
 
 volumes:
   mongodb_data:
